@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -17,8 +15,6 @@ import com.example.mapl0.db_game_project.Framework.AppManager;
 import com.example.mapl0.db_game_project.Framework.GameActivity;
 import com.example.mapl0.db_game_project.Framework.GameView;
 import com.example.mapl0.db_game_project.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -97,10 +93,15 @@ public class RankActivity extends Activity {
 
         m_arr = new ArrayList<Item>();
 
-        for(int i=0; i<name.length; i++) {
-            m_arr.add(new Item("@drawable/pad", (i+1) , name[i], score[i]));
-            if(name[i].toString().equals(c_name) && score[i] == c_score) {
-                rank_tv.setText(c_name + " 님의 스코어는 " + c_score + "점으로 " + (i+1) + "등 입니다!!");
+        if(name != null) {
+            for(int i=0; i<name.length; i++) {
+                if(name[i] != null) {
+                    m_arr.add(new Item("@drawable/pad", (i+1) , name[i], score[i]));
+                }
+                
+                if(name[i] != null && name[i].toString().equals(c_name) && score[i] == c_score) {
+                    rank_tv.setText(c_name + " 님의 스코어는 " + c_score + "점으로 " + (i+1) + "등 입니다!!");
+                }
             }
         }
 
