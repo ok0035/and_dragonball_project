@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rank_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/text_rank"
+        android:background="#AB000000"
+        android:textColor = "#ffffff"
+        android:gravity="center"
+        android:textColorHint="#a0a0a0"
+        android:hint = "랭킹에 등록할 이름을 입력하세요!" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_rank"
+            android:background="#AB000000"
+            android:textColor= "#ffffff"
+            android:text = "입력" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
